@@ -1,0 +1,125 @@
+<section class="parallax-window" data-parallax="scroll" style="background: url(../assets/img/eventImage/22430205_2012383972372287_3972873679699705856_n.jpg) no-repeat center center;background-size:cover;text-shadow: 0 1px 2px rgba(0, 0, 0, 0.76);
+">
+  <div class="parallax-content-2" style="background-color:rgba(0, 0, 0, 0.479);
+  ">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-8">
+          <h1>{{obj.title}}</h1>
+          <span>{{obj.location}}</span>
+
+        </div>
+        <div class="col-md-4 col-sm-4">
+          <div id="price_single_main">
+            <span>
+              <sup>MAR</sup>27</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End section -->
+
+<div id="position">
+  <div class="container">
+    <ul>
+      <li>
+        <a href="#">Home</a>
+      </li>
+      <li>
+        <a href="#">Category</a>
+      </li>
+      <li>Page active</li>
+    </ul>
+  </div>
+</div>
+<!-- End Position -->
+
+
+<div class="collapse" id="collapseMap">
+  <div id="map" class="map"></div>
+</div>
+<!-- End Map -->
+
+<div class="container margin_60">
+  <div class="row">
+    <div class="col-md-8" id="single_tour_desc">
+      <div id="Img_carousel" class="slider-pro">
+        <div class="sp-slides">
+
+          <div class="sp-slide">
+            <img alt="Image" class="sp-image" class="img-responsive" src="{{obj.eventPict}}">
+          </div>
+
+        </div>
+
+        <hr>
+
+        <div class="row">
+          <div class="col-md-3">
+            <h3>Description</h3>
+          </div>
+          <div class="col-md-9">
+            <h4>About event</h4>
+            <p>
+              {{obj.description}}
+            </p>
+            <h4>Location</h4>
+            <p>
+              {{obj.location}}
+            </p>
+            <h4>Price</h4>
+            <p>
+              {{obj.price}}
+            </p>
+            <!-- End row  -->
+          </div>
+        </div>
+        <hr>
+
+        <div class="row">
+          <div class="col-md-3">
+            <h3>Date and Time</h3>
+          </div>
+          <div class="col-md-9">
+            <h4>Starts</h4>
+            <p>Date: {{obj.dateStart}}</p>
+            <p>Time: {{obj.timeStart}}</p>
+            <h4>Ends</h4>
+            <p>Date: {{obj.dateEnd}}</p>
+            <p>Time: {{obj.timeEnd}}</p>
+          </div>
+        </div>
+        <hr>
+
+        <div class="row">
+          <div class="col-md-3">
+            <h3>Event Type & Topic</h3>
+          </div>
+          <div class="col-md-9">
+            <h4>Type</h4>
+            <p>{{obj.eventType}}</p>
+            <h4>Topic</h4>
+            <p>{{obj.eventTopic}}</p>
+          </div>
+        </div>
+        <hr>
+
+        <div class="row">
+            <div class="col-md-3">
+              <h3>Contact</h3>
+            </div>
+            <div class="col-md-9">
+              <h4>{{obj.contact}}</h4>
+            </div>
+          </div>
+
+      </div>
+      <!--End  single_tour_desc-->
+    </div>
+    <!--End row -->
+  </div>
+</div>
+
+<!--End container -->

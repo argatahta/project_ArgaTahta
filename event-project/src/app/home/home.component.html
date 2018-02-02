@@ -1,0 +1,114 @@
+<section id="hero" style="background: url(../assets/img/eventImage/Jakarta-Panorama.jpg) no-repeat center center;background-size:cover;text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+">
+  <div class="intro_title"style="background-color:rgba(0,0,0,.32);
+  " >
+    <h3 class="animated fadeInDown">Indonesia Event</h3>
+    <p class="animated fadeInDown">Event Directory in Indonesia</p>
+    <a routerLink = "/eventlist" class="animated fadeInUp button_intro">See All Events</a>
+  </div>
+
+  <div id="search_bar_container">
+    <div class="container">
+      <div class="search_bar">
+        <span class="nav-facade-active" id="nav-search-in">
+          <span id="nav-search-in-content" >All</span>
+          <span class="nav-down-arrow nav-sprite"></span>
+          <select title="Search in" class="searchSelect" id="searchDropdownBox" name="tours_category">
+            <option value="Semua Pencarian" title="Semua Pencarian">All</option>
+            <option value="Destinasi" title="Destinasi">Destinations</option>
+            <option value="Event" title="Event">Events</option>
+          </select>
+        </span>
+        <div class="nav-searchfield-outer">
+          <input type="text" autocomplete="off" name="field-keywords" placeholder="Please input an event that you are looking for..." id="twotabsearchtextbox" [(ngModel)]= "searchInput" >
+        </div>
+        <div class="nav-submit-button" (click)="searchPage()">
+          <input type="button"  title="Cerca" class="nav-submit-input" value="Search">
+        </div>
+      </div>
+      <!-- End search bar-->
+    </div>
+  </div>
+  <!-- /search_bar-->
+</section>
+<!-- End hero -->
+
+<section class="container margin_60">
+
+  <div class="main_title">
+    <h2>Upcoming
+      <span>Events</span></h2>
+  </div>
+
+  <div  class="row">
+
+    <div *ngFor = "let e of eventList , let i  = index" class="col-md-4 col-sm-6 wow zoomIn" data-wow-delay="0.1s">
+      <div class="tour_container" style="height: 400px;">
+        <div class="img_container">
+          <a routerLink="/detail/{{e._id}}">
+            <img src="{{e.eventPict}}" class="img-responsive" alt="Image">
+          </a>
+          <div class="short_info">
+            <i></i>{{e.eventTopic}}
+            <span class="price">
+              {{convertDate(e.dateStart)}}<sup style="color:#e04f67">{{convertMonth(e.dateStart)}}</sup></span>
+          </div>
+        </div>
+        <div class="tour_title">
+          <h3>
+            <strong>{{e.title}}</strong>
+          </h3>
+          <p>{{e.location}}</p>
+        </div>
+      </div>
+      <!-- End box tour -->
+    </div>
+    <!-- End col-md-4 -->
+
+  </div>
+  <!-- End row -->
+
+  <p class="text-center nopadding">
+    <a routerLink= "/eventlist" class="btn_1 medium">
+      <i class="icon-eye-7"></i>See all event ({{eventTotal}}) </a>
+  </p>
+</section>
+<!-- End section -->
+
+<section class="promo_full" style="background: url(..assets/img/eventImage/23416979_127351347955697_9196758946314977280_n.jpg) no-repeat center center;background-size:cover;text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+">
+  <div class="promo_full_wp magnific">
+    <div>
+      <h3>Event Promo</h3>
+      <p>
+        Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset,
+        doctus volumus explicari qui ex.
+      </p>
+      <a href="https://www.youtube.com/watch?v=Zz5cu72Gv5Y" class="video">
+        <i class="icon-play-circled2-1"></i>
+      </a>
+    </div>
+  </div>
+</section>
+<!-- End section -->
+
+<hr>
+
+<section class="margin_60 gray_bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 main_title">
+        <h2>Ini
+          <span>isinya</span> feed instagram</h2>
+        <p>LIHAT REFRESI DI WONDERFUL Indonesia</p>
+      </div>
+    </div>
+
+    <div class="row">
+
+    </div>
+    <!-- End row -->
+  </div>
+  <!-- End container -->
+</section>
+<!-- End section -->
